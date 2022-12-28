@@ -1,0 +1,11 @@
+C:\Users\wasd\Desktop\Charts\Charts\bin\Release\Charts.exe.config
+C:\Users\wasd\Desktop\Charts\Charts\bin\Release\Charts.exe
+C:\Users\wasd\Desktop\Charts\Charts\bin\Release\Charts.pdb
+C:\Users\wasd\Desktop\Charts\Charts\obj\Release\Charts.csproj.AssemblyReference.cache
+C:\Users\wasd\Desktop\Charts\Charts\obj\Release\Charts.csproj.SuggestedBindingRedirects.cache
+C:\Users\wasd\Desktop\Charts\Charts\obj\Release\Charts.Form1.resources
+C:\Users\wasd\Desktop\Charts\Charts\obj\Release\Charts.Properties.Resources.resources
+C:\Users\wasd\Desktop\Charts\Charts\obj\Release\Charts.csproj.GenerateResource.cache
+C:\Users\wasd\Desktop\Charts\Charts\obj\Release\Charts.csproj.CoreCompileInputs.cache
+C:\Users\wasd\Desktop\Charts\Charts\obj\Release\Charts.exe
+C:\Users\wasd\Desktop\Charts\Charts\obj\Release\Charts.pdb

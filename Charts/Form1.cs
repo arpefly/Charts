@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Threading;
 using System.Reflection;
+using System.Security.Policy;
 
 namespace Charts
 {
@@ -98,22 +99,6 @@ namespace Charts
             }
             #endregion
         }
-
-        private void DrawToBuffer(Image image)
-        {
-            using (Graphics g = Graphics.FromImage(image))
-            {
-                _X = -10;
-                _step = 0.001;
-
-                for (int i = 1; i < 100000; i++)
-                {
-                    _Y = Math.Sin(_X) + Math.Cos(_X) + Math.Abs(Math.Sin(_X) * Math.Cos(_X));
-                    g.FillRectangle(new SolidBrush(Color.Red), (int)(_X0 + Math.Round(_X * 40 * _scaleX)), (int)(_Y0 - Math.Round(_Y * 40 * _scaleY)), 1, 1);
-                    _X += _step;
-                }
-            }
-        }
         private async void ButtonStartCalc_Click(object sender, EventArgs e)
         {
             if (_buffer is null)
@@ -125,6 +110,21 @@ namespace Charts
             await Task.Run(() => DrawToBuffer(_buffer));
             timer.Enabled = false;
             pictureBox.Invalidate();
+        }
+        private void DrawToBuffer(Image image)
+        {
+            using (Graphics g = Graphics.FromImage(image))
+            {
+                _X = -10;
+                _step = 0.01;
+
+                for (int i = 1; i < 10000; i++)
+                {
+                    _Y = Math.Sin(_X);
+                    g.FillRectangle(new SolidBrush(Color.Red), (int)(_X0 + Math.Round(_X * 40 * _scaleX)), (int)(_Y0 - Math.Round(_Y * 40 * _scaleY)), 1, 1);
+                    _X += _step;
+                }
+            }
         }
         private void Timer_Tick(object sender, EventArgs e)
         {
